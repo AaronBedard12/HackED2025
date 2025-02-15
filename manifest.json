@@ -1,23 +1,5 @@
 {
-<<<<<<< HEAD
     "name": "Level check Extensions",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-
-      "default_popup": "main.html"
-    },
-    "permissions": [
-      "sidePanel"
-    ],
-    "side_panel": {
-      "default_path": "sidepanel.html"
-
-    }
-  }
-=======
-  "name": "Level check Extensions",
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
@@ -31,4 +13,3 @@
     "default_path": "sidepanel/sidepanel.html"
   }
 }
->>>>>>> 20624cfd4c78b8d7397ddf0ecbe25428ec312040
