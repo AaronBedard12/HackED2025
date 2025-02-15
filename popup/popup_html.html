@@ -9,24 +9,13 @@
     </head>
     <body>
         <h1>Wellness Check-in</h1>
-        <form id="myForm">
-            <label>
-              <input type="checkbox" name="wellnessOptions" value="Awful"> Option 1
-            </label>
-            <label>
-              <input type="checkbox" name="wellnessOptions" value="Bad"> Option 2
-            </label>
-            <label>
-              <input type="checkbox" name="wellnessOptions" value="Ok"> Option 3
-            </label>
-            <label>
-                <input type="checkbox" name="wellnessOptions" value="Good"> Option 2
-            </label>
-            <label>
-                <input type="checkbox" name="wellnessOptions" value="Awsome"> Option 3
-            </label>
-            <button type="button" onclick="getSelectedOptions()">Submit</button>
-          </form>
+        $('div .checkbox').click(function () { 
+          checkedState = $(this).attr('checked');
+           $(this).parent('div').children('.checkbox:checked').each(function () {
+               $(this).attr('checked', false);
+           });
+           $(this).attr('checked', checkedState);
+          });
           
     </body>
 </html>
