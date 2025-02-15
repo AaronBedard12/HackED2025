@@ -1,34 +1,16 @@
 {
-<<<<<<< HEAD
-    "name": "Level check Extensions",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-
-      "default_popup": "main.html"
-    },
-    "permissions": [
-      "sidePanel"
-    ],
-    "side_panel": {
-      "default_path": "sidepanel.html"
-
-    }
-  }
-=======
-  "name": "Level check Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
-  "action": {
-    "default_popup": "popup/popup_html.html"
+  "name": "Let's Level up",
+  "version": "1.0",
+  "permissions": ["sidePanel"],
+  "background": {
+    "service_worker": "background.js"
   },
-  "permissions": [
-    "sidePanel"
-  ],
+  "action": {
+    "default_popup": "main.html",
+    "default_title": "Open Main Popup"
+  },
   "side_panel": {
-    "default_path": "sidepanel/sidepanel.html"
+    "default_path": "sidepanel.html"
   }
 }
->>>>>>> 20624cfd4c78b8d7397ddf0ecbe25428ec312040

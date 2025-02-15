@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Level up Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    #title {
+      margin: auto;
+      width: 50%;
+      padding: 24px;
+      background-color: purple;
+      text-align: center;
+      border-radius: 12px;
+      color: white;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 8px;
+      background-color: orange;
+      border-color: orange;
+      border-radius: 8px;
+      color: white;
+      border-style: solid;
+      border-width: 2px;
+      transition-duration: 0.4s;
+
+    }
+    button:hover {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 8px;
+      background-color: white;
+      border-color: orange;
+      border-radius: 8px;
+      color: orange; 
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    button
+    .center {
+      margin: auto;
+      width: 80%;
+    }
+    .level-stuff {
+      margin: auto;
+      margin-bottom: 16px;
+      width: 80%;
+      background-color: #e5eefc;
+      border-radius: 12px;
+      padding: 16px;
+
+    }
+    .level-border {
+      height: 12px;
+      width: 100%;
+      background-color: green;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 4px;
+      border-color: darkgreen;
+
+    }
+    .level-bar {
+      height: 12px;
+      width: 25%;
+      background-color: greenyellow;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="center" id="title">User</h1>
+  <br>
+  <div class="level-stuff">
+    <h2>Level: 15</h2>
+    <div class="level-border">
+      <div class="level-bar"></div>
+    </div>
+  </div>
+
+  <div class="center">
+    <button>Goals</button>
+    <button>Rewards</button>
+    <button>Wellness</button>
+  </div>
+
+</body>
+</html>
