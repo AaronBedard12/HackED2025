@@ -1,15 +1,15 @@
 {
-    "name": "Level check Extensions",
+  "name": "Level check Extensions",
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "popup/popup_html.html"
+    "default_popup": "bin/popup/popup_html.html"
   },
   "permissions": [
     "sidePanel"
   ],
   "side_panel": {
-    "default_path": "sidepanel/sidepanel.html"
+    "default_path": "bin/sidepanel/sidepanel.html"
   }
 }
