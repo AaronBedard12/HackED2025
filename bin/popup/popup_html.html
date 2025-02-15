@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Check-in</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="../../libraries/jquery-3.7.1.js"></script>
+    <script src="popup_js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Wellness Check-in</h1>
+
+        <div class="options">
+            <div class="option">
+                <input type="radio" id="awful" name="WellnessCheckOption" value="Awful">
+                <label for="awful">Awful</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="bad" name="WellnessCheckOption" value="Bad">
+                <label for="bad">Bad</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="ok" name="WellnessCheckOption" value="Ok">
+                <label for="ok">Ok</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="good" name="WellnessCheckOption" value="Good">
+                <label for="good">Good</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="great" name="WellnessCheckOption" value="Great">
+                <label for="great">Great</label>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn" onclick="SubmitAndQuit()">Submit and Quit</button> <br>
+            <button class="btn" onclick="submit()">Submit</button>
+        </div>
+
+        <p id="result" class="result"></p>
+    </div>
+</body>
+</html>
