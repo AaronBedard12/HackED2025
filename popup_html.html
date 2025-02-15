@@ -4,11 +4,29 @@
         <title>
             Wellness Check-in
         </title>
+        <script name="JQuery" src="jquery-3.7.1.min.js"></script>
+        <script name="popup_js" src="popup_js.js"></script>
     </head>
     <body>
         <h1>Wellness Check-in</h1>
-        <form action="/submit" method="post">
-            <label for="name">How Are You Doing?</label>
-            <input type="data" id="name" name="name" required><br>
+        <form id="myForm">
+            <label>
+              <input type="checkbox" name="wellnessOptions" value="Awful"> Option 1
+            </label>
+            <label>
+              <input type="checkbox" name="wellnessOptions" value="Bad"> Option 2
+            </label>
+            <label>
+              <input type="checkbox" name="wellnessOptions" value="Ok"> Option 3
+            </label>
+            <label>
+                <input type="checkbox" name="wellnessOptions" value="Good"> Option 2
+            </label>
+            <label>
+                <input type="checkbox" name="wellnessOptions" value="Awsome"> Option 3
+            </label>
+            <button type="button" onclick="getSelectedOptions()">Submit</button>
+          </form>
+          
     </body>
 </html>
