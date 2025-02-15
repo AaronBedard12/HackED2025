@@ -8,3 +8,7 @@ Project Information
 
 Chrome extension habit and goal tracker
 --> Reach your goals, and reward yourself
+
+#API's used:
+sidepanel
+
