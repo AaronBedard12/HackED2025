@@ -4,6 +4,16 @@
     "version": "1.0",
     "manifest_version": 3,
     "action": {
+<<<<<<< HEAD
       "default_popup": "popup_html.html"
+=======
+      "default_popup": "main.html"
+    },
+    "permissions": [
+      "sidePanel"
+    ],
+    "side_panel": {
+      "default_path": "sidepanel.html"
+>>>>>>> 0a55fd7c6a93077a44ba49b5b30d108554ba7ff3
     }
   }
