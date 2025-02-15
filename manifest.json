@@ -5,5 +5,11 @@
     "manifest_version": 3,
     "action": {
       "default_popup": "main.html"
+    },
+    "permissions": [
+      "sidePanel"
+    ],
+    "side_panel": {
+      "default_path": "sidepanel.html"
     }
   }
