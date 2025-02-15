@@ -21,8 +21,11 @@ function SubmitAndQuit() {
 }
 
 function submit() {
-  // Add functionality for the second button if needed
-  alert("Submit button clicked!");
+  selectedValue = $('input[name="WellnessCheckOption"]:checked').val();
+  console.log("Selected value:", selectedValue);
+  SaveValue();
+  LoadMainPage();
+  //window.close();
 }
 
 function SaveValue() {
@@ -31,4 +34,14 @@ function SaveValue() {
   chrome.storage.local.set({ [key]: selectedValue }, function() {
     console.log('Value saved:', selectedValue);
   });
+}
+
+function LoadMainPage() {
+  // Fetch and load main.html into the current popup
+  fetch("../main/main.html") // Use a relative path
+    .then(response => response.text())
+    .then(data => {
+      document.body.innerHTML = data; // Replace the current popup content
+    })
+    .catch(error => console.error("Error loading main.html:", error));
 }

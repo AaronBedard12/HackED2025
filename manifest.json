@@ -1,15 +1,15 @@
 {
-  "name": "Level check Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
-  "action": {
-    "default_popup": "bin/popup/popup_html.html"
+  "name": "Let's Level up",
+  "version": "1.0",
+  "permissions": ["sidePanel","storage", "tabs"],
+  "background": {
+    "service_worker": "bin/background.js"
   },
-  "permissions": [
-    "sidePanel",
-    "storage"
-  ],
+  "action": {
+    "default_popup": "bin/popup/popup_html.html",
+    "default_title": "Open Main Popup"
+  },
   "side_panel": {
     "default_path": "bin/sidepanel/sidepanel.html"
   }
