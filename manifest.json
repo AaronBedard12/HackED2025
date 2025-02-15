@@ -2,12 +2,12 @@
   "manifest_version": 3,
   "name": "Let's Level up",
   "version": "1.0",
-  "permissions": ["sidePanel"],
+  "permissions": ["sidePanel","storage", "tabs"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "bin/background.js"
   },
   "action": {
-    "default_popup": "main.html",
+    "default_popup": "bin/popup/popup_html.html",
     "default_title": "Open Main Popup"
   },
   "side_panel": {
