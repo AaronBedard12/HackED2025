@@ -12,6 +12,5 @@
   },
   "side_panel": {
     "default_path": "bin/sidepanel/sidepanel.html"
-    "default_path": "sidepanel.html"
   }
 }
