@@ -1,8 +1,6 @@
 var selectedValue;
 let hasSelection = false;
 
-
-
 function OnBegin() {
   // Hide the quickmenu initially
   document.getElementById("quickmenu").style.display = "none";
@@ -86,5 +84,5 @@ function SaveValue() {
   });
 }
 
-// Run OnBegin when the window loads
+
 window.addEventListener("load", OnBegin);
