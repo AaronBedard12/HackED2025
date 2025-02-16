@@ -1,8 +1,6 @@
 var selectedValue;
 let hasSelection = false;
 
-
-
 function OnBegin() {
   document.getElementById("quickmenu").style.display = "none";
 }
@@ -45,3 +43,10 @@ function SaveValue() {
 }
 
 window.addEventListener("load", OnBegin);
+
+//Side Panel Stuff
+
+let goals = '{"goals":[ ' +
+    '{"goal_name": "place_holder", "status": "not completed", "xp_amt": "50"} ] }';
+
+  
