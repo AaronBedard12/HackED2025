@@ -5,6 +5,7 @@
   <script src="sidepanel.js"></script>
   <style>
     body {
+      height: 95vh;
       font-family: Arial, sans-serif;
       border: solid, 4px, lightcoral;
       border-radius: 12px;
@@ -101,6 +102,21 @@
       border-color: green;
       border-width: 4px;
   }
+  .goals-ui {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    min-width: 80%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: aliceblue;
+    border-radius: 16px;
+    transition-duration: 0.5s;
+    display: none;
+  }
+  .shadow {
+    box-shadow: 0px 4px 0px lightgray;
+  }
+  
   </style>
 </head>
 <body>
@@ -115,11 +131,18 @@
   </div>
 
   <div class="center">
-    <button>Goals</button>
+    <button id="goals-button">Goals</button>
+    <div id="goals-ui" class="goals-ui shadow">
+      <h2 style="text-align: center">Goal Progress</h2>
+      <div class="piechart"></div>
+      <div class="goal-list">
+        <ol>Run 5km</ol>
+        <ol>Do Homework</ol>
+        <ol>Kiss Seth</ol>
+      </div>
+    </div>
     <button>Rewards</button>
     <button>Wellness</button>
-    <h2 style="text-align: center">Goal Progress</h2>
-    <div class="piechart"></div>
   </div>
 
 </body>
