@@ -41,17 +41,15 @@ function OnBegin() {
 }
 
 // Attach event listeners when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded!");
 
   // Attach event listener to the "Open Side Panel" button
-  document.getElementById("open-side-panel").addEventListener("click", () => {
-    console.log("Opening side panel...");
-    chrome.windows.getCurrent((window) => {
-      chrome.sidePanel.open({ windowId: window.id });
-    });
-    window.close(); // Close the current popup
+document.getElementById("open-side-panel").addEventListener("click", () => {
+  console.log("Opening side panel...");
+  chrome.windows.getCurrent((window) => {
+    chrome.sidePanel.open({ windowId: window.id });
   });
+  window.close(); // Close the current popup
+});
 
 // Attach event listeners when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
