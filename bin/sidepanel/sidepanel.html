@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Level up Panel</title>
+  <script src="background.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,7 +19,7 @@
       text-align: center;
       border-radius: 12px;
       color: white;
-      box-shadow: 0px 4px 0px orange;
+      box-shadow: 0px 4px 0px orchid;
 
     }
     button {
@@ -86,6 +87,20 @@
       background-color: yellow;
       border-radius: 4px;
     }
+    .piechart {
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-image: conic-gradient(
+          yellow 25%,
+          lightgreen 0
+      );
+      box-shadow: 0px 4px 0px lightgray;
+      border-style: solid;
+      border-color: green;
+      border-width: 4px;
+  }
   </style>
 </head>
 <body>
@@ -103,6 +118,8 @@
     <button>Goals</button>
     <button>Rewards</button>
     <button>Wellness</button>
+    <h2 style="text-align: center">Goal Progress</h2>
+    <div class="piechart"></div>
   </div>
 
 </body>
