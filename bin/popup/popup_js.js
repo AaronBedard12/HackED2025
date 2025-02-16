@@ -1,6 +1,3 @@
-console.log("chrome object:", chrome); // Debugging
-console.log("chrome.storage:", chrome.storage); // Debugging
-
 var selectedValue;
 
 // Attach event listeners when the DOM is fully loaded
@@ -25,7 +22,6 @@ function submit() {
   console.log("Selected value:", selectedValue);
   SaveValue();
   LoadMainPage();
-  //window.close();
 }
 
 function SaveValue() {
@@ -37,11 +33,16 @@ function SaveValue() {
 }
 
 function LoadMainPage() {
+  // Generate a valid URL for main.html
+  const mainPageUrl = chrome.runtime.getURL("main/main.html");
+
   // Fetch and load main.html into the current popup
-  fetch("../main/main.html") // Use a relative path
+  fetch(mainPageUrl)
     .then(response => response.text())
     .then(data => {
-      document.body.innerHTML = data; // Replace the current popup content
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, "text/html");
+      document.body.innerHTML = doc.body.innerHTML;
     })
     .catch(error => console.error("Error loading main.html:", error));
 }
