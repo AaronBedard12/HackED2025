@@ -1,6 +1,8 @@
 var selectedValue;
 let hasSelection = false;
 
+
+
 function OnBegin() {
   document.getElementById("quickmenu").style.display = "none";
 }
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Attach event listeners when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
+
   // Attach event listener to the "Submit" button
   document.getElementById("submit").addEventListener("click", submit);
 });
