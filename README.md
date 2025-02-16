@@ -4,11 +4,11 @@
 Kyle Nguyen
 Aaron Bedard
 
-##Project Information
+## Project Information
 
-###Chrome extension habit and goal tracker
+### Chrome extension habit and goal tracker
 --> Reach your goals, and reward yourself
 
-###API's used:
+### API's used:
 sidepanel
 
