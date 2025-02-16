@@ -33,16 +33,11 @@ function SaveValue() {
 }
 
 function LoadMainPage() {
-  // Generate a valid URL for main.html
-  const mainPageUrl = chrome.runtime.getURL("main/main.html");
-
   // Fetch and load main.html into the current popup
-  fetch(mainPageUrl)
+  fetch("../main/main.html") // Use a relative path
     .then(response => response.text())
     .then(data => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(data, "text/html");
-      document.body.innerHTML = doc.body.innerHTML;
+      document.body.innerHTML = data; // Replace the current popup content
     })
     .catch(error => console.error("Error loading main.html:", error));
 }
