@@ -7,7 +7,7 @@
     "service_worker": "bin/background.js"
   },
   "action": {
-    "default_popup": "bin/popup/popup_html.html",
+    "default_popup": "bin/main/main.html",
     "default_title": "Open Main Popup"
   },
   "side_panel": {
