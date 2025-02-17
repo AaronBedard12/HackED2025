@@ -2,7 +2,7 @@
 var level = 1;
 var coins = 0;
 var xp = 0;
-var levelupXP = level * 1.5;
+var levelupXP = 5 + (level * 1.5);
 
 var goalNames = [];
 var goalCompletions = [];
@@ -19,7 +19,26 @@ let selectedRewardCoinValue = null;
 
 function OnOpen() {
     document.getElementById("user-level").innerHTML = `Level: ${level} Coins: ${coins}`;
-    document.getElementById("level-bar").style.width = `${(xp / levelupXP) * 100}%`;
+    updateLevelProgressBar();
+    updatePieChart(); // Update the pie chart
+}
+
+// Function to update the level progress bar
+function updateLevelProgressBar() {
+    const levelBar = document.getElementById("level-bar");
+    const progressPercentage = (xp / levelupXP) * 100;
+    levelBar.style.width = `${progressPercentage}%`;
+}
+
+// Function to update the pie chart based on completed goals
+// Function to update the pie chart based on completed goals
+function updatePieChart() {
+    const totalGoals = goalNames.length;
+    const completedGoals = goalCompletions.filter(completion => completion === true).length; // Count only true values
+    const completionPercentage = totalGoals > 0 ? (completedGoals / totalGoals) * 100 : 0;
+
+    const pieChart = document.querySelector(".piechart");
+    pieChart.style.backgroundImage = `conic-gradient(yellow ${completionPercentage}%, lightgreen 0)`;
 }
 
 // Function to check and handle level up
@@ -54,6 +73,7 @@ function closeRewardsUi() {
 }
 
 // Remove items when clicked
+// Remove items when clicked
 function setupRemoveOnClick(containerClass) {
     const container = document.querySelector(`.${containerClass}`);
     container.addEventListener("click", (event) => {
@@ -63,19 +83,20 @@ function setupRemoveOnClick(containerClass) {
                 if (goalNames[i] === itemText) {
                     coins += goalCoinAmount[i];
                     xp += goalExpAmount[i];
-                    goalCompletions[i] = true;
+                    goalCompletions[i] = true; // Mark the goal as completed
                 } else if (rewardNames[i] === itemText) {
                     coins -= rewardCoinAmount[i];
                     rewardCompletions[i] = true;
                 }
             }
             levelUp();
-            OnOpen();
+            OnOpen(); // Refresh the UI, including the pie chart
             event.target.remove();
         }
     });
 }
 
+// Add new goals or rewards
 // Add new goals or rewards
 function setupAddNewItem(buttonSelector, inputSelector, listContainerClass, isReward = false) {
     const addButton = document.querySelector(buttonSelector);
@@ -91,7 +112,7 @@ function setupAddNewItem(buttonSelector, inputSelector, listContainerClass, isRe
                 rewardCoinAmount.push(parseInt(coinValue));
             } else {
                 goalNames.push(newItemText);
-                goalCompletions.push(false);
+                goalCompletions.push(false); // Add a new goal as incomplete
                 goalCoinAmount.push(parseInt(coinValue));
                 goalExpAmount.push(parseInt(coinValue) * 1.5);
             }
@@ -102,6 +123,7 @@ function setupAddNewItem(buttonSelector, inputSelector, listContainerClass, isRe
 
             document.querySelector(`.${listContainerClass}`).appendChild(newItem);
             inputField.value = "";
+            OnOpen(); // Refresh the UI, including the pie chart
         } else {
             alert("Please select a coin value and enter a " + (isReward ? "reward" : "goal") + "!");
         }
