@@ -9,27 +9,78 @@
       font-family: Arial, sans-serif;
       padding: 10px;
       width: 200px;
+      border: solid 4px lightcoral;
+      border-radius: 12px;
+      box-shadow: 0px 4px 0px lightgray;
+
     }
     button {
       width: 100%;
       padding: 10px;
       font-size: 16px;
       margin-bottom: 8px;
+      background-color: lightblue;
+      border-color: lightblue;
+      border-radius: 8px;
+      color: white;
+      border-style: solid;
+      border-width: 2px;
+      transition-duration: 0.2s;
+      box-shadow: 0px 4px 0px lightgray;
     }
-    #level-bar {
-        margin-bottom: 8px;
-        width: 90%;
-        padding: 10px;
-        background-color: greenyellow;
+
+    button:hover {
+      background-color: white;
+      border-color: lightblue;
+      color: lightblue;
+    }
+
+    button:active {
+      background-color: lightblue;
+      border-color: white;
+      color: white;
+    }
+    .level-stuff {
+      margin: auto;
+      margin-bottom: 16px;
+      width: 80%;
+      border: solid 2px lightcoral;
+      padding: 8px;
+      padding-bottom: 12px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 0px lightgray;
+    }
+
+    .level-border {
+      margin: auto;
+      height: 12px;
+      width: 100%;
+      background-color: lightgreen;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 4px;
+      border-color: green;
+      box-shadow: 0px 4px 0px lightgray;
+    }
+
+    .level-bar {
+      height: 12px;
+      width: 25%;
+      background-color: yellow;
+      border-radius: 4px;
     }
   </style>
 
 </head>
 <body>
   <div id="quickmenu">
-    <h2>Level: 15</h2>
-    <div id="level-bar"></div>
-    <button id="open-goals">Goals</button>
+    <div class="level-stuff">
+      <h2 style="color: lightcoral; margin: 0;">Kyle Nguyen</h2>
+      <h3 id="user-level" style="color: lightcoral; margin: 2px; margin-left: 0px;">Level: 1</h3>
+      <div class="level-border">
+        <div id="level-bar" class="level-bar"></div>
+      </div>
+    </div>
     <button id="open-side-panel">Open Side Panel</button>
   </div>
 
