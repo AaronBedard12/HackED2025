@@ -10,7 +10,6 @@
       border: solid 4px lightcoral;
       border-radius: 12px;
       padding: 10px;
-      box-shadow: 0px 4px 0px lightgray;
     }
 
     #title {
@@ -98,6 +97,7 @@
       border-style: solid;
       border-color: green;
       border-width: 4px;
+      margin-bottom: 8px;
     }
 
     .goals-ui {
@@ -163,11 +163,22 @@
     .rewardInputField {
       width: 100%;
     }
-
-    .goalInputField {
-      width: 35%;
+    .goal-list {
+      width: 80%;
+      margin: auto;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0px 4px 0px lightgray;
+      text-align: left;
     }
-
+    .goalInputField {
+      width: 95%;
+      margin-bottom: 12px;
+    }
+    .value-div {
+      width: 100%;
+      margin: auto;
+    }
 
     .coin-value-button.selected {
       background-color: lightcoral;
@@ -176,9 +187,18 @@
     }
 
     #coinValueButton {
-      width: auto;
+      width: 32%;
       height: 50%;
-      padding-bottom: 0%;
+      padding: 2px;
+    }
+    #rewardCoinValueButton {
+      width: 32%;
+      height: 50%;
+      padding: 2px;
+    }
+    .rewardInputField {
+      width: 95%;
+      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -197,18 +217,22 @@
     <button id="goals-button">Goals</button>
 
     <div id="goals-ui" class="goals-ui shadow">
-      <h2 style="text-align: center">Goal Progress</h2>
-      <div class="piechart"></div>
       <div class="goal-list">
       </div>
+      <hr>
+      <h2 style="text-align: center">Goal Progress</h2>
+      <div class="piechart"></div>
       <hr>
       <p>
       <h3 class="center-text">Add New Goal</h3>
       <br>
       <input class="goalInputField">
-      <button class="coin-value-button" id="coinValueButton" value="1">1</button>
-      <button class="coin-value-button" id="coinValueButton" value="2">2</button>
-      <button class="coin-value-button" id="coinValueButton" value="3">3</button>
+      <br>
+      <div class="value-div">
+      <button class="coin-value-button" id="coinValueButton" value="1">easy</button>
+      <button class="coin-value-button" id="coinValueButton" value="2">medium</button>
+      <button class="coin-value-button" id="coinValueButton" value="3">hard</button>
+      </div>
       </p>
       <button id="AddGoalButton">Add Goal</button>
     </div>
@@ -224,9 +248,11 @@
       <h3 class="center-text">Add New Reward</h3>
       <br>
       <input class="rewardInputField">
-      <button class="coin-value-button" id="rewardCoinValueButton" value="1">1</button>
-      <button class="coin-value-button" id="rewardCoinValueButton" value="2">2</button>
-      <button class="coin-value-button" id="rewardCoinValueButton" value="3">3</button>
+      <div class="reward-buttons">
+      <button class="coin-value-button" id="rewardCoinValueButton" value="1">$1</button>
+      <button class="coin-value-button" id="rewardCoinValueButton" value="2">$2</button>
+      <button class="coin-value-button" id="rewardCoinValueButton" value="3">$3</button>
+    </div>
       </p>
       <button id="AddRewardButton">Add Reward</button>
     </div>
