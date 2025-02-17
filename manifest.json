@@ -2,9 +2,9 @@
   "manifest_version": 3,
   "name": "Let's Level up",
   "version": "1.0",
-  "permissions": ["sidePanel","storage", "tabs"],
+  "permissions": ["sidePanel","storage", "tabs", "notifications"],
   "background": {
-    "service_worker": "bin/background.js"
+    "service_worker": "background.js"
   },
   "action": {
     "default_popup": "bin/main/main.html",

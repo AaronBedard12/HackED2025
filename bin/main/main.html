@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Main Popup</title>
-  <script src="main.js"></script>
   <script src="../../libraries/jquery-3.7.1.js"></script>
 
   <style>
@@ -37,14 +36,16 @@
   <div id="popup">
     <h1>Wellness Check-in</h1>
     <div class="options">
-        <label><input type="radio" name="WellnessCheckOption" value="Awful">Awful</label>
-        <label><input type="radio" name="WellnessCheckOption" value="Bad">Bad</label>
-        <label><input type="radio" name="WellnessCheckOption" value="Ok">Ok</label>
-        <label><input type="radio" name="WellnessCheckOption" value="Good">Good</label>
-        <label><input type="radio" name="WellnessCheckOption" value="Great">Great</label>
+        <label>Awful &emsp; Bad &emsp; Ok &emsp; Good &emsp; Great</label><br>
+        <lable>&nbsp;<input type="radio" name="WellnessCheckOption" value="Awful"></lable>
+        <lable>&emsp;&ensp;<input type="radio" name="WellnessCheckOption" value="Bad"></lable>
+        <lable>&emsp;&nbsp;<input type="radio" name="WellnessCheckOption" value="Ok"></lable>
+        <lable>&emsp;&ensp;<input type="radio" name="WellnessCheckOption" value="Good"></lable>
+        <lable>&emsp;&emsp;<input type="radio" name="WellnessCheckOption" value="Great"></lable>
     </div>
 
     <button id="submit">Submit</button>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
