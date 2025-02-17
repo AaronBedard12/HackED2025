@@ -7,6 +7,7 @@ var levelupXP = level * 1.5;
 function OnOpen() {
     document.getElementById("user-level").innerHTML = `Level: ${level} Coins: ${coins}`;
     document.getElementById("level-bar").style.width = `${xp/levelupXP}%`;
+
 }
 
 function levelUp() {
@@ -38,6 +39,10 @@ function closeRewardsUi() {
     const button = document.getElementById("rewards-ui");
     button.classList.remove("open");
     
+}
+
+function openGoals(){
+    document.getElementById("goals-ui").style.display = 'block';
 }
 
 
