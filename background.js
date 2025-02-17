@@ -3,7 +3,7 @@ var coins = 0;
 var xp = 0;
 var levelupXP; 
 
-importScripts('bin/main/main.js'); // Static import of dependencies
+//importScripts('bin/main/main.js'); // Static import of dependencies
 chrome.runtime.onStartup.addListener(() => {
   chrome.notifications.create({
     type: "basic",

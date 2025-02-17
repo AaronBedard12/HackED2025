@@ -40,7 +40,7 @@ function OnBegin() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM fully loaded!");
 
   document.getElementById("open-side-panel").addEventListener("click", () => {
