@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Level up Panel</title>
   <style>
@@ -11,6 +12,7 @@
       padding: 10px;
       box-shadow: 0px 4px 0px lightgray;
     }
+
     #title {
       margin: auto;
       width: 80%;
@@ -21,6 +23,7 @@
       color: white;
       box-shadow: 0px 4px 0px orchid;
     }
+
     button {
       width: 100%;
       padding: 10px;
@@ -35,21 +38,25 @@
       transition-duration: 0.2s;
       box-shadow: 0px 4px 0px lightgray;
     }
+
     button:hover {
       background-color: white;
       border-color: lightblue;
       color: lightblue;
     }
+
     button:active {
       background-color: lightblue;
       border-color: white;
       color: white;
     }
+
     .center {
       margin: auto;
       width: 80%;
       border-radius: 12px;
     }
+
     .level-stuff {
       margin: auto;
       margin-bottom: 16px;
@@ -60,6 +67,7 @@
       border-radius: 12px;
       box-shadow: 0px 4px 0px lightgray;
     }
+
     .level-border {
       margin: auto;
       height: 12px;
@@ -71,29 +79,30 @@
       border-color: green;
       box-shadow: 0px 4px 0px lightgray;
     }
+
     .level-bar {
       height: 12px;
       width: 25%;
       background-color: yellow;
       border-radius: 4px;
     }
+
     .piechart {
       margin: auto;
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background-image: conic-gradient(
-          yellow 25%,
-          lightgreen 0
-      );
+      background-image: conic-gradient(yellow 25%,
+          lightgreen 0);
       box-shadow: 0px 4px 0px lightgray;
       border-style: solid;
       border-color: green;
       border-width: 4px;
     }
+
     .goals-ui {
-      margin-top: 0; 
-      margin-bottom: 0; 
+      margin-top: 0;
+      margin-bottom: 0;
       min-width: 80%;
       background-color: aliceblue;
       border-radius: 16px;
@@ -103,17 +112,17 @@
       overflow: hidden;
       box-shadow: 0px 4px 0px lightgray;
     }
-    
+
     .goals-ui.open {
-      max-height: 500px; 
+      max-height: 1000px;
       opacity: 1;
-      padding: 16px; 
-      margin-bottom: 8px; 
+      padding: 16px;
+      margin-bottom: 8px;
     }
 
     .rewards-ui {
-      margin-top: 0; 
-      margin-bottom: 0; 
+      margin-top: 0;
+      margin-bottom: 0;
       min-width: 80%;
       background-color: aliceblue;
       border-radius: 16px;
@@ -124,17 +133,18 @@
       overflow: hidden;
       box-shadow: 0px 4px 0px lightgray;
     }
-    
+
     .rewards-ui.open {
-      max-height: 500px; 
+      max-height: 500px;
       opacity: 1;
-      padding: 16px; 
-      margin-bottom: 8px; 
+      padding: 16px;
+      margin-bottom: 8px;
     }
 
     .shadow {
       box-shadow: 0px 4px 0px lightgray;
     }
+
     ul {
       font-size: 16px;
     }
@@ -144,17 +154,30 @@
       color: darkgrey;
       font-size: 16px;
     }
+
     .center-text {
       text-align: center;
       margin: auto;
     }
 
     .new-goal {
-      width: 100%;      
+      width: 35%;
     }
 
+    .coin-value-button.selected {
+      background-color: lightcoral;
+      border-color: lightcoral;
+      color: white;
+    }
+
+    #coinValueButton {
+      width: auto;
+      height: 50%;
+      padding-bottom: 0%;
+    }
   </style>
 </head>
+
 <body>
   <br>
   <div class="level-stuff">
@@ -181,8 +204,11 @@
       <h3 class="center-text">Add New Goal</h3>
       <br>
       <input class="new-goal">
+      <button class="coin-value-button" id="coinValueButton" value="1">1</button>
+      <button class="coin-value-button" id="coinValueButton" value="2">2</button>
+      <button class="coin-value-button" id="coinValueButton" value="3">3</button>
       </p>
-      <button>Add Goal</button>
+      <button id="AddGoalButton">Add Goal</button>
     </div>
 
     <button id="rewards-button">Rewards</button>
@@ -190,9 +216,6 @@
     <div id="rewards-ui" class="rewards-ui shadow">
       <h2 style="text-align: center">Rewards</h2>
       <div class="reward-list">
-        <ul>Get Pizza</ul>
-        <ul>Go out tonight!</ul>
-        <ul>Kiss Seth</ul>
       </div>
       <hr>
       <p>
@@ -207,4 +230,5 @@
   </div>
   <script src="sidepanel.js"></script>
 </body>
+
 </html>
