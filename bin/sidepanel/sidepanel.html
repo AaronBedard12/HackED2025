@@ -4,7 +4,7 @@
 <head>
   <title>Level up Panel</title>
   <style>
-    body {
+        body {
       height: 95vh;
       font-family: Arial, sans-serif;
       border: solid 4px lightcoral;
@@ -160,9 +160,14 @@
       margin: auto;
     }
 
-    .new-goal {
+    .rewardInputField {
+      width: 100%;
+    }
+
+    .goalInputField {
       width: 35%;
     }
+
 
     .coin-value-button.selected {
       background-color: lightcoral;
@@ -195,15 +200,12 @@
       <h2 style="text-align: center">Goal Progress</h2>
       <div class="piechart"></div>
       <div class="goal-list">
-        <ul>Run 5km</ul>
-        <ul>Do Homework</ul>
-        <ul>Kiss Seth</ul>
       </div>
       <hr>
       <p>
       <h3 class="center-text">Add New Goal</h3>
       <br>
-      <input class="new-goal">
+      <input class="goalInputField">
       <button class="coin-value-button" id="coinValueButton" value="1">1</button>
       <button class="coin-value-button" id="coinValueButton" value="2">2</button>
       <button class="coin-value-button" id="coinValueButton" value="3">3</button>
@@ -221,9 +223,12 @@
       <p>
       <h3 class="center-text">Add New Reward</h3>
       <br>
-      <input class="new-goal">
+      <input class="rewardInputField">
+      <button class="coin-value-button" id="rewardCoinValueButton" value="1">1</button>
+      <button class="coin-value-button" id="rewardCoinValueButton" value="2">2</button>
+      <button class="coin-value-button" id="rewardCoinValueButton" value="3">3</button>
       </p>
-      <button>Add Reward</button>
+      <button id="AddRewardButton">Add Reward</button>
     </div>
 
     <button>Skill Tree</button>
